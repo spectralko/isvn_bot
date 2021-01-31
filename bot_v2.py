@@ -46,7 +46,8 @@ def callback_inline(call):
             bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="Возврат в главное меню",reply_markup=keyboard)
 #Логика работы кнопки пока
         elif call.data == "bye":
-            bot.send_message(call.message.chat.id, "Удачи друг!")             
+            bot.send_message(call.message.chat.id, "Удачи друг!")
+            break
 #Логика работы функции выключения
 def station_name_off(message):
       bot.send_message(message.chat.id, "⚠Сейчас будет происходить выключение серверов!⚠\n\nЗапущена магия выключения, ожидайте... "+ "🧙")
