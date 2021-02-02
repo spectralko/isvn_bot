@@ -11,10 +11,24 @@ bot = telebot.TeleBot("1080220803:AAF9okmySN38daiPtLl8G14srVcknvCqKW4")
 #Инициируем инлайн клавиатуру
 @bot.message_handler(commands=['start'])
 def inline_kb(message):
-    markup = types.InlineKeyboardMarkup(row_width=2)
+    markup = types.InlineKeyboardMarkup(row_width=1)
     off_button = types.InlineKeyboardButton(text="Выключить сервера", callback_data="off")
     ping_button = types.InlineKeyboardButton(text="Проверить сервера", callback_data="ping")
     bye_button = types.InlineKeyboardButton(text="Остановить бота", callback_data="bye")
+    line_01_button = types.InlineKeyboardButton(text="01_Сокольническая", callback_data="line_01")
+    line_02_button = types.InlineKeyboardButton(text="02_Замоскворецкая", callback_data="line_02")
+    line_03_button = types.InlineKeyboardButton(text="03_Арбатско-Покровская", callback_data="line_03")
+    line_04_button = types.InlineKeyboardButton(text="04_Филевская", callback_data="line_04")
+    line_05_button = types.InlineKeyboardButton(text="05_Кольцевая", callback_data="line_05")
+    line_06_button = types.InlineKeyboardButton(text="06_Калужско-Рижская", callback_data="line_06")
+    line_07_button = types.InlineKeyboardButton(text="07_Таганско-Краспропесненская", callback_data="line_07")
+    line_08_button = types.InlineKeyboardButton(text="08_Калининская", callback_data="line_08")
+    line_8a_button = types.InlineKeyboardButton(text="8а_", callback_data="line_8a")
+    line_09_button = types.InlineKeyboardButton(text="09_Серпуховско-Тимирязевская", callback_data="line_09")
+    line_10_button = types.InlineKeyboardButton(text="10_Люблинская", callback_data="line_10")
+    line_11_button = types.InlineKeyboardButton(text="11_Каховская", callback_data="line_11")
+    line_12_button = types.InlineKeyboardButton(text="12_Бутовская", callback_data="line_12")
+#    line_14_button = types.InlineKeyboardButton(text="", callback_data="line_14")
     markup.add(off_button, ping_button, bye_button)
     bot.send_message(message.chat.id, "Что... Хозяин... Ннадо?? ", reply_markup=markup)
 #Логика работы клавиатуры
@@ -47,7 +61,32 @@ def callback_inline(call):
 #Логика работы кнопки пока
         elif call.data == "bye":
             bot.send_message(call.message.chat.id, "Удачи друг!")
-            break
+
+def callback_inline_lines(call):
+    if call.data == "line_01":
+        
+    elif call.data == "line_01":
+        
+    elif call.data == "line_01":
+        
+    elif call.data == "line_01":
+        
+    elif call.data == "line_01":
+        
+    elif call.data == "line_01":
+        
+    elif call.data == "line_01":
+        
+    elif call.data == "line_01":
+        
+    elif call.data == "line_01":
+        
+    elif call.data == "line_01":
+        
+    elif call.data == "line_01":
+        
+    elif call.data == "line_01":
+        
 #Логика работы функции выключения
 def station_name_off(message):
       bot.send_message(message.chat.id, "⚠Сейчас будет происходить выключение серверов!⚠\n\nЗапущена магия выключения, ожидайте... "+ "🧙")
@@ -90,15 +129,6 @@ def station_name_ping(message):
          backbutton = types.InlineKeyboardButton(text="🔙", callback_data="mainmenu")
          keyboard.add(backbutton)
          bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="Возврат в главное меню",reply_markup=keyboard)
-
-
-
-
-
-
-
-
-
 
 #Чтобы не падал
 if __name__ == '__main__':
