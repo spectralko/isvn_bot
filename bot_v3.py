@@ -20,7 +20,7 @@ line_name_11 = "11_Каховская"
 line_name_12 = "12_Бутовская"
 
 #Объявляем ID бота
-bot = telebot.TeleBot("1080220803:AAF9okmySN38daiPtLl8G14srVcknvCqKW4")
+bot = telebot.TeleBot("xx")
 
 #Инициируем инлайн клавиатуру
 @bot.message_handler(commands = ['start'])
