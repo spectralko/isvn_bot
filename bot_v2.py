@@ -6,7 +6,7 @@ import emoji
 import re
 from telebot import types
 #Объявляем ID бота
-bot = telebot.TeleBot("1080220803:AAF9okmySN38daiPtLl8G14srVcknvCqKW4")
+bot = telebot.TeleBot("xx")
 
 #Инициируем инлайн клавиатуру
 @bot.message_handler(commands=['start'])
